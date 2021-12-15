@@ -1,0 +1,257 @@
+{
+	"info": {
+		"name": "API_Mongoose",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SensorType",
+			"item": [
+				{
+					"name": "Binary",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n     \"_id\": \"61b529b0f3b2d8a0ecc5f001\",\n    \"type\": 1,\n    \"description\": \"Binary sensor\",\n    \"valuetype\": \"Binary\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/sensor/type"
+					},
+					"response": []
+				},
+				{
+					"name": "Float",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n     \"_id\": \"61b529b0f3b2d8a0ecc5f002\",\n    \"type\": 2,\n    \"description\": \"Float sensor\",\n    \"valuetype\": \"Float\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/sensor/type"
+					},
+					"response": []
+				},
+				{
+					"name": "get SensorTypes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/sensor/type"
+					},
+					"response": []
+				},
+				{
+					"name": "del All SensorTypes",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3000/api/sensor/type"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Device",
+			"item": [
+				{
+					"name": "add Device",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"_id\": \"61b529b0f3b2d8a0ecc50001\",\n    \"DeviceName\": \"8 port dry contact\",\n    \"hwaddr\": \"AA-BB-CC-DD\",\n    \"description\": \"8 port dry contact hw: AA-BB-CC-DD\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/device"
+					},
+					"response": []
+				},
+				{
+					"name": "add Device_2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"_id\": \"61b529b0f3b2d8a0ecc50002\",\n    \"DeviceName\": \"T/H Device\",\n    \"hwaddr\": \"AA-BB-CC-FF\",\n    \"description\": \"T/H Device hw: AA-BB-CC-FF\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/device"
+					},
+					"response": []
+				},
+				{
+					"name": "update Device by ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"DeviceName\": \"8 port contact updated\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/device/61b529b0f3b2d8a0ecc50001"
+					},
+					"response": []
+				},
+				{
+					"name": "get Device by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/device/61b529b0f3b2d8a0ecc50001"
+					},
+					"response": []
+				},
+				{
+					"name": "get Devices",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/device"
+					},
+					"response": []
+				},
+				{
+					"name": "del Device by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3000/api/device/61b529b0f3b2d8a0ecc50001"
+					},
+					"response": []
+				},
+				{
+					"name": "del All Device",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3000/api/device"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sensor",
+			"item": [
+				{
+					"name": "add Sensor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"_id\": \"61b529b0f3b2d8a0ecca0001\",\n    \"ıonum\": 1,\n    \"SensorName\": \"First Sensor\",\n    \"type\": \"61b529b0f3b2d8a0ecc5f001\",\n    \"parentDev\": \"61b529b0f3b2d8a0ecc50001\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/sensor"
+					},
+					"response": []
+				},
+				{
+					"name": "add Sensor_2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"_id\": \"61b529b0f3b2d8a0ecca0002\",\n    \"ıonum\": 2,\n    \"SensorName\": \"Second Sensor\",\n    \"type\": \"61b529b0f3b2d8a0ecc5f002\",\n    \"parentDev\": \"61b529b0f3b2d8a0ecc50002\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/sensor"
+					},
+					"response": []
+				},
+				{
+					"name": "update Sensor by ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"SensorName\": \"sensor updated\",\n    \"type\": \"61b529b0f3b2d8a0ecc5f002\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/sensor/61b529b0f3b2d8a0ecca0001"
+					},
+					"response": []
+				},
+				{
+					"name": "get Sensor by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/sensor/61b529b0f3b2d8a0ecca0001"
+					},
+					"response": []
+				},
+				{
+					"name": "get Sensors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/sensor"
+					},
+					"response": []
+				},
+				{
+					"name": "del Sensor by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3000/api/sensor/61b529b0f3b2d8a0ecca0001"
+					},
+					"response": []
+				},
+				{
+					"name": "del All Sensor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3000/api/sensor"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
